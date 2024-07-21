@@ -1,0 +1,27 @@
+server:
+  port: 80080
+
+spring:
+  application:
+    nam: springboot-batch-3
+  batch:
+    job:
+      name: ${job.name}
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+
+elasticsearch:
+  cluster:
+    cluster-1:
+      host: http://localhost
+      port: 9200
+
